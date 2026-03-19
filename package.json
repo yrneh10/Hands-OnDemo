@@ -1,0 +1,18 @@
+{
+  "name": "ci-security-demo",
+  "version": "1.0.0",
+  "description": "Sample Node.js app for CI pipeline with security scanning",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build": "echo \"Building project...\"",
+    "test": "echo \"No tests yet\"",
+    "lint": "echo \"No lint configured\""
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {}
+}
