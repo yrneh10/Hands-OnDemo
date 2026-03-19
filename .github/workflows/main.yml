@@ -35,6 +35,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Install Snyk CLI
+        run: npm install -g snyk
+
+      - name: Snyk CLI Diagnostic
+        run: |
+          echo "Checking Snyk CLI Version..."
+          snyk --version  
+
+      - name: Authenticate Snyk
+        run: |
+          export SNYK_TOKEN=${{ secrets.SNYK_TOKEN }}
+          snyk auth $SNYK_TOKEN --auth-type=token        
+
       - name: Run SAST / SCA scan
         run: snyk test
         env:
